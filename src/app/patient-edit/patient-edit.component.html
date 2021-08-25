@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col col-12">
+        <form (ngSubmit)="onSubmit(editForm)" #editForm="ngForm" >
+            <div ngModelGroup="fullName">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" #firstName="ngModel" [ngModel]="patient.firstName" id="firstName" name="firstName" required>
+                    <span *ngIf="!firstName.valid && firstName.touched" class="alert-danger">First Name is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" #lastName="ngModel" [ngModel]="patient.lastName" id="lastName"  name="lastName" required>
+                    <span *ngIf="!lastName.valid && lastName.touched" class="alert-danger">Last Name is required</span>
+                </div>
+
+        </div>
+            <div class="form-group">
+                <label for="phoneNumber">phoneNumber</label>
+                <input type="number" class="form-control" [ngModel]="patient.phoneNumber" id="phoneNumber" name="phoneNumber" number>
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="text" class="form-control" #email="ngModel" [ngModel]="patient.email" id="email" name="email" email required>
+                <span *ngIf="!email.valid && email.touched" class="alert-danger">email is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="address">address</label>
+                <input type="text" class="form-control" #address="ngModel" [ngModel]="patient.address" id="address" name="address" address required>
+                <span *ngIf="!address.valid && address.touched" class="alert-danger">address is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="ssn">ssn</label>
+                <input type="text" class="form-control" #ssn="ngModel" [ngModel]="patient.ssn" id="ssn" name="ssn" ssn required>
+                <span *ngIf="!ssn.valid && ssn.touched" class="alert-danger">ssn is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="country">country</label>
+                <input type="text" class="form-control" #country="ngModel" [ngModel]="patient.country" id="country" name="country" country required>
+                <span *ngIf="!country.valid && country.touched" class="alert-danger">Country is required</span>
+
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" #age="ngModel" [ngModel]="patient.age" id="age" name="age" Age required>
+                <span *ngIf="!age.valid && age.touched" class="alert-danger">Age is required</span>
+            </div>
+
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" ngModel name="gender">
+                    <option *ngFor="let item of genders">{{item}}</option>
+                </select>
+            </div>
+<br/>
+
+            <button class="btn btn-primary btn-sm" type="submit" [disabled]="!editForm.valid">Submit</button>
+        </form>
+    </div>
+</div> 

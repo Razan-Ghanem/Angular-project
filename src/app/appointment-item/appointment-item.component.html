@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-body">
+        <a [routerLink]="['/appointments/', appointment.id]" [queryParams]="{allowEdit: true}">
+            <div>{{appointment.doctor.firstName}}</div>
+            <div>{{appointment.patient.firstName}}</div>
+            <div>{{appointment.reservation}}</div>
+        </a>
+        
+            
+    </div>
+</div>
+<br/>
+<ng-content></ng-content>

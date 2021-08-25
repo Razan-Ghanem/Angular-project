@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-6">
+
+<div class="row">
+    <div class="col-4">
+        <input type="text" placeholder="firstName" class="form-control" #firstName/> 
+    </div>
+        
+    <div class="col-4">
+        <input type="text" placeholder="lastName" class="form-control" #lastName/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="address" class="form-control" #address/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="notes" class="form-control" #notes/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="phoneNumber" class="form-control" #phoneNumber/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="email" class="form-control" #email/> 
+    </div>
+   
+    <div class="col-4">
+        <input type="text" placeholder="monthlySalary" class="form-control" #monthlySalary/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="iban" class="form-control" #iban/> 
+    </div>
+
+    <div class="col-4">
+        <input type="text" placeholder="country" class="form-control" #country/> 
+    </div>
+    
+   
+</div>
+
+    </div>
+
+    <div class="col-6">
+        
+<button class="btn btn-primary btn-sm" (click)="addDoctor(firstName, lastName, address, notes, phoneNumber, email, monthlySalary,iban, country)">Add Doctor</button>
+    </div>
+</div>

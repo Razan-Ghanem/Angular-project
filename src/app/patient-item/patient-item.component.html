@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+        <a [routerLink]="['/patients/', patient.id]" [queryParams]="{allowEdit: true}">
+            <h3>{{patient.fullName}}</h3>
+        </a>
+        
+        <!-- <div>{{patient.firstName}}</div>
+        <div>{{patient.lastName}}</div>
+        <div>{{patient.phoneNumber}}</div>
+        <div>{{patient.email}}</div>
+        <div>{{patient.address}}</div>
+        <div>{{patientssn}}</div>
+        <div>{{patient.country}}</div>
+        <div>{{patient.age}}</div>
+        <div>{{patient.gender}}</div> -->
+         </div>
+</div>
+<br/>
+<ng-content></ng-content>

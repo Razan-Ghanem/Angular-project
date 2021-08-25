@@ -1,0 +1,26 @@
+<br/>
+<div class="row">
+    <p class="alert-danger">{{error}}</p>
+    <div class="col col-12" *ngIf=isLoading>
+        <span>Loading...</span>
+    </div>
+    <div class="col col-12">
+        <button class="btn btn-primary btn-sm" (click)="onAddPatient()">Add Patient</button>
+    
+    </div>
+
+    <br/><br/>
+    <div class="col col-2 ">
+        <!-- <app-patients-header (patientsAdded)="addPatient($event)"></app-patients-header>
+        <br/> -->
+
+        <app-patient-item *ngFor="let item of patients" [patientItem]="item">
+            <!-- <p>This is inside component</p> -->
+        </app-patient-item>
+
+    </div>
+    <div class="col col-9 offset-1">
+        <router-outlet></router-outlet>
+    </div>
+    
+</div>

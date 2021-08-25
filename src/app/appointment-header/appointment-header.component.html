@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-6">
+
+<div class="row">
+    <div class="col-4">
+        <input type="text" placeholder="doctor" class="form-control" #doctor/> 
+    </div>
+        
+    <div class="col-4">
+        <input type="text" placeholder="patient" class="form-control" #patient/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="reservation" class="form-control" #reservation/> 
+    </div>
+</div>
+
+    </div>
+
+    <div class="col-6">
+        
+<button class="btn btn-primary btn-sm" (click)="addAppointment(doctor, patient, reservation)">Add Appointment</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+
+<br>
+<H1>Welcome to Clinic Website</H1>
+<br>
+<table class="table">
+    <thead class="table-bar">
+        <tr>
+            <th>
+                Doctor
+            </th>
+            <th>
+                Patient
+            </th>
+            <th>
+                Reservation
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-content">
+            <tr *ngFor="let item of appointments">
+
+                <td>
+                    <!-- <app-appointment-item *ngFor="let item of appointments" [appointmentItem]="item">
+                    </app-appointment-item> -->
+                    {{item.doctor.firstName +" " + item.doctor.lastName}}
+                </td>
+                <td>
+                    {{item.patient.firstName +" "+ item.patient.lastName}}
+                </td>
+                <td>
+                    {{item.reservation}}
+                </td>
+
+            </tr>
+    </tbody>
+    <div class="col col-9 offset-1">
+        <router-outlet></router-outlet>
+    </div>
+</table>
+
+
